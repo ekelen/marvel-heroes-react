@@ -1,0 +1,11 @@
+.hero {
+  background-color: hsl(0, 0%, 48%);
+}
+
+.hero > a {
+  color: #00d1b2;
+}
+
+.is-ancestor {
+  flex-wrap: wrap;
+}

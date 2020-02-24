@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marvel Hero Catalog
 
-## Available Scripts
+A small frontend catalog for viewing Marvel universe hero information.
 
-In the project directory, you can run:
+The focus of this project was to test out using [React hooks](https://reactjs.org/docs/hooks-intro.html), a feature intended to increase component legibility, maintainability, modularity, and performance (not bad)!
 
-### `yarn start`
+It uses the [Bulma](https://github.com/jgthms/bulma) CSS framework and was made with [Create React App](https://github.com/facebook/create-react-app).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Running it
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This project is intended to be run in a development environment. The environment variables in a frontend build (`REACT_APP_...`) are not private.
 
-### `yarn test`
+```shell
+cp .env .env.local # Add REACT_APP_API_PRIVATE to .env.local
+yarn start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+However, if you are building for production for use on your personal machine, you can build it similarly:
 
-### `yarn build`
+```shell
+# Add REACT_APP_API_PRIVATE to .env
+yarn build
+serve -s build
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚠️ It's not production ready :)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I made this project to get reacquainted with React basics and to try out the new Hooks feature.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A "roadmap" for this project could look something like this:
 
-### `yarn eject`
+### Workflow
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- If working on a team, create container for development (Dockerize)
+- If developing for production, create centralized instructions and automation for build and deployment (Docker + a CI tool)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### App features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Add hero thumbnail images to homepage
+- Programmatic navigation back to homepage
+- More professional interface (higher contrast, clearer typography and content hierarchy, shared color scheme, accessibility features)
+- Search bar, pagination, other basic catalog features...
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Code style
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Prefer scoped styling methods to traditional CSS methods and classes (e.g. Styled Components)
+- Minimize code duplication (e.g. list rendering, request error handling)
+- Centralize common styling variables, such as colors, padding, etc.

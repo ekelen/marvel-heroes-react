@@ -1,0 +1,56 @@
+.heroName,
+.appearanceTitle {
+  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.appearanceTitle {
+  font-size: 1.5em;
+  color: hsl(0, 0%, 75%);
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.subtitle.listTitle {
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.heroImage {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.heroImage img {
+  max-width: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.basis-100 {
+  flex-basis: 100%;
+}
+
+.heroAppearances {
+  margin-top: 3rem;
+}
+
+.box {
+  background-color: hsl(0, 0%, 48%);
+}
+
+.heroInfo a {
+  color: hsl(204, 86%, 53%);
+}
+
+.heroList {
+  background-color: hsl(0, 0%, 21%);
+}
+
+.listTile {
+  background-color: hsl(0, 0%, 36%);
+}
