@@ -6,33 +6,31 @@ import {
   BrowserRouter as Router,
   Redirect,
   Switch,
-  Route
+  Route,
+  Link
 } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <div className="container">
-        <section className="section pageHeader">
-          <div className="container is-fluid">
-            <h1 className="title has-text-grey-lighter pageHeader">
-              {/* TODO: Programmatic nav */}
-              <a href="/" className="homeLink">
-                The Marvel Universe!
-              </a>
-            </h1>
-          </div>
-        </section>
-        <section className="section">
-          <Switch>
-            <Route path="/heroes">
+        <Switch>
+          <Route path="/heroes">
+            <section className="section pageHeader">
+              <h1 className="title has-text-grey-lighter pageHeader">
+                <Link to="/heroes" className="homeLink">
+                  The Marvel Universe!
+                </Link>
+              </h1>
+            </section>
+            <section className="section">
               <Home />
-            </Route>
-            <Route path="/">
-              <Redirect to="/heroes" />
-            </Route>
-          </Switch>
-        </section>
+            </section>
+          </Route>
+          <Route path="/">
+            <Redirect to="/heroes" />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
