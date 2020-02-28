@@ -11,9 +11,15 @@ html {
   text-align: center;
   letter-spacing: 0.02em;
   padding-top: 1.5em;
+  color: #efe91b;
+}
+
+.homeLink {
+  color: #efe91b;
+  font-size: 3rem;
 }
 
 .homeLink:active,
 .homeLink:hover {
-  color: #61dafb;
+  color: #c5212b;
 }

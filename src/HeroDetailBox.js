@@ -13,7 +13,6 @@ export default function HeroDetailBox() {
     description: "",
     events: [],
     name: "",
-    resourceURL: "",
     series: [],
     stories: []
   });
@@ -31,14 +30,12 @@ export default function HeroDetailBox() {
             attributionText,
             data: { results }
           } = heroJson;
-
           const [
             {
               comics: { items: comics },
               description,
               events: { items: events },
               name,
-              resourceURL,
               series: { items: series },
               stories: { items: stories },
               thumbnail: { path, extension }
@@ -50,7 +47,6 @@ export default function HeroDetailBox() {
             description,
             events,
             name,
-            resourceURL,
             series,
             stories
           });
@@ -84,19 +80,22 @@ export default function HeroDetailBox() {
   return loading ? (
     <p>Loading...</p>
   ) : hasError ? (
-    <p>"Error fetching hero..."</p>
+    <p>Error fetching hero...</p>
   ) : (
     <div className="tile is-ancestor box heroInfo">
-      <div className="tile is-6 is-child">
-        <h1 className="title heroName basis-100">{hero.name}</h1>
-        <p className="subtitle basis-100 has-text-dark">
-          {hero.description || "No description provided!"}
-        </p>
-      </div>
-      <div className="tile is-6 heroImage">
-        <figure className="image">
-          <img src={thumbnail} alt={"Image of " + hero.name} />
-        </figure>
+      <div className="tile is-parent is-12 box heroInfoHead">
+        <div className="tile is-6 is-child">
+          <h1 className="title heroName basis-100">{hero.name}</h1>
+          <p className="content basis-100 has-text-dark">
+            {hero.description ||
+              "No description provided! But they're probably pretty cool. ✌️"}
+          </p>
+        </div>
+        <div className="tile is-6 heroImage">
+          <figure className="image">
+            <img src={thumbnail} alt={"Image of " + hero.name} />
+          </figure>
+        </div>
       </div>
 
       {/* Lists */}
@@ -109,8 +108,10 @@ export default function HeroDetailBox() {
         {renderLists("stories", hero.stories)}
         {renderLists("events", hero.events)}
       </div>
-      <footer className="tile is-12 attributionText">
-        <a href={hero.resourceURI}>{hero.attributionText}</a>
+      <footer className="tile is-12">
+        <a className="attributionText" href="http://marvel.com">
+          {hero.attributionText}
+        </a>
       </footer>
     </div>
   );

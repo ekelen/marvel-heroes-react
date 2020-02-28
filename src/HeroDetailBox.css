@@ -14,7 +14,8 @@
   color: hsl(0, 0%, 75%);
 }
 
-.listTile {
+.listTile,
+.heroInfoHead {
   background-color: hsl(0, 0%, 18%);
 }
 
@@ -43,6 +44,19 @@
   margin-top: 3rem;
 }
 
+.heroInfo {
+  /* border: 1px solid rgba(200, 250, 0, 0.5); */
+}
+
 .heroInfo a {
   color: hsl(204, 86%, 53%);
+}
+
+a.attributionText {
+  color: #efe91b;
+}
+
+a.attributionText:active,
+a.attributionText:hover {
+  color: #c5212b;
 }
