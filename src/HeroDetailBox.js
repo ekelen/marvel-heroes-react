@@ -63,33 +63,31 @@ export default function HeroDetailBox() {
     if (loading) getHero(heroId);
   });
 
-  const marginSet = {
-    margin: "0.5em"
-  };
-
   const renderLists = (listTitle, items) =>
     !items || !items.length ? (
       ""
     ) : (
-      <div className="tile is-3 wrap box listTile" style={marginSet}>
-        <p className="subtitle listTitle has-text-light">{listTitle}</p>
-        <ul className="content">
-          {items.map((item, i) => (
-            <li key={i}>
-              <a href={item.resourceURI}>{item.name}</a>
-            </li>
-          ))}
-        </ul>
+      <div className="column">
+        <div className="box listTile">
+          <p className="subtitle listTitle has-text-light">{listTitle}</p>
+          <ul className="content">
+            {items.map((item, i) => (
+              <li key={i}>
+                <a href={item.resourceURI}>{item.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     );
 
   return loading ? (
-    <p>"Loading..."</p>
+    <p>Loading...</p>
   ) : hasError ? (
     <p>"Error fetching hero..."</p>
   ) : (
     <div className="tile is-ancestor box heroInfo">
-      <div className="tile is-6 wrap">
+      <div className="tile is-6 is-child">
         <h1 className="title heroName basis-100">{hero.name}</h1>
         <p className="subtitle basis-100 has-text-dark">
           {hero.description || "No description provided!"}
@@ -102,10 +100,10 @@ export default function HeroDetailBox() {
       </div>
 
       {/* Lists */}
-      <div className="tile is-ancestor">
-        <div className="tile is-parent is-12">
-          <h2 className="title appearanceTitle">Appearances</h2>
-        </div>
+      <div className="tile is-12 appearanceTitle section">
+        <h2>Appearances</h2>
+      </div>
+      <div className="columns">
         {renderLists("comics", hero.comics)}
         {renderLists("series", hero.series)}
         {renderLists("stories", hero.stories)}

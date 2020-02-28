@@ -36,8 +36,6 @@ A "roadmap" for this project could look something like this:
 
 ### App features
 
-- Add hero thumbnail images to homepage
-- Programmatic navigation back to homepage
 - More professional interface (higher contrast, clearer typography and content hierarchy, shared color scheme, accessibility features)
 - Search bar, pagination, other basic catalog features...
 
