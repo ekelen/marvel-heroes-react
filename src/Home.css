@@ -9,3 +9,9 @@
 .is-ancestor {
   flex-wrap: wrap;
 }
+
+img {
+  border: 1px solid black;
+  border-radius: 5px;
+  object-fit: cover;
+}

@@ -37,6 +37,10 @@ export function Home() {
         <div className="tile is-parent is-2" key={i}>
           <div className={"has-text-grey-lighter hero tile is-child box"}>
             <p className="subtitle">{hero.name}</p>
+            <img
+              src={hero.thumbnail.path + "." + hero.thumbnail.extension}
+              alt={"Thumbnail image for " + hero.name}
+            />
             <Link to={`${match.url}/${hero.id}`}>More →</Link>
           </div>
         </div>
