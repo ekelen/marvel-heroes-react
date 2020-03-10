@@ -6,7 +6,7 @@ html {
   padding: 1.5rem;
 }
 
-.pageHeader {
+h1.pageHeader {
   font-family: Anton, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
   letter-spacing: 0.02em;

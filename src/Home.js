@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
+import "./Spinner.css";
 import HeroDetailBox from "./HeroDetailBox.js";
 import request from "./requests.js";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
@@ -13,6 +14,7 @@ export function Home() {
     const getHeroes = () =>
       request()
         .then(results => results.json())
+        // .then(async json => {await new Promise(r => setTimeout(r, 3000)); return json})
         .then(heroesJson => {
           setLoading(false);
           setError(heroesJson.code !== 200);
@@ -32,7 +34,7 @@ export function Home() {
   let match = useRouteMatch();
 
   const heroList = !heroes.length
-    ? ""
+    ? (<div className="spinnerContainer"><div class="lds-ripple"><div></div><div></div></div><p className="is-family-monospace has-text-grey-lighter basis-100 has-text-centered">Searching Earth-616 and beyond...</p></div>)
     : heroes.map((hero, i) => (
         <div className="tile is-parent is-2" key={i}>
           <div className={"has-text-grey-lighter hero tile is-child box"}>

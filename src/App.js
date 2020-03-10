@@ -22,6 +22,7 @@ function App() {
                   The Marvel Universe!
                 </Link>
               </h1>
+              <p className="has-text-grey has-text-centered has-text-weight-bold">(A <a href="https://reactjs.org/docs/hooks-intro.html">ReactJS Hooks</a> demo)</p>
             </section>
             <section className="section">
               <Home />
