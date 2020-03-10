@@ -3,7 +3,18 @@
 }
 
 .hero > a {
-  color: #00d1b2;
+  color: hsl(204, 87%, 67%);
+}
+
+.hero > a:hover,
+.hero > a:active {
+  color: #efe91b;
+}
+
+.subtitle {
+  font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  color: rgba(208, 208, 208, 1);
 }
 
 .is-ancestor {

@@ -2,7 +2,8 @@
 .appearanceTitle {
   font-family: "Anton", Impact, Haettenschweiler, "Arial Narrow Bold",
     sans-serif;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(216, 216, 216, 1);
+  text-transform: uppercase;
 }
 
 .box {
@@ -10,8 +11,8 @@
 }
 
 .appearanceTitle {
-  font-size: 1.5em;
-  color: hsl(0, 0%, 75%);
+  font-size: 2em;
+  color: black;
 }
 
 .listTile,
@@ -44,12 +45,13 @@
   margin-top: 3rem;
 }
 
-.heroInfo {
-  /* border: 1px solid rgba(200, 250, 0, 0.5); */
-}
-
 .heroInfo a {
   color: hsl(204, 86%, 53%);
+}
+
+.heroInfo a:hover,
+.heroInfo a:active {
+  color: #de3541;
 }
 
 a.attributionText {

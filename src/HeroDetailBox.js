@@ -78,20 +78,20 @@ export default function HeroDetailBox() {
     );
 
   return loading ? (
-    <p>Loading...</p>
+    <p className="has-text-grey-lighter">Loading...</p>
   ) : hasError ? (
     <p>Error fetching hero...</p>
   ) : (
     <div className="tile is-ancestor box heroInfo">
       <div className="tile is-parent is-12 box heroInfoHead">
-        <div className="tile is-6 is-child">
+        <div className="tile is-8 is-child">
           <h1 className="title heroName basis-100">{hero.name}</h1>
-          <p className="content basis-100 has-text-dark">
+          <p className="content basis-100 has-text-grey-lighter is-family-monospace">
             {hero.description ||
               "No description provided! But they're probably pretty cool. ✌️"}
           </p>
         </div>
-        <div className="tile is-6 heroImage">
+        <div className="tile is-4 heroImage">
           <figure className="image">
             <img src={thumbnail} alt={"Image of " + hero.name} />
           </figure>

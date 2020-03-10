@@ -41,7 +41,7 @@ export function Home() {
               src={hero.thumbnail.path + "." + hero.thumbnail.extension}
               alt={"Thumbnail image for " + hero.name}
             />
-            <Link to={`${match.url}/${hero.id}`}>More →</Link>
+            <Link to={`${match.url}/${hero.id}`} className="has-text-weight-bold">More →</Link>
           </div>
         </div>
       ));
