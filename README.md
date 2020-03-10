@@ -6,6 +6,10 @@ The focus of this project was to test out using [React hooks](https://reactjs.or
 
 It uses the [Bulma](https://github.com/jgthms/bulma) CSS framework and was made with [Create React App](https://github.com/facebook/create-react-app).
 
+## Preview
+
+![Preview of marvel-heroes-react](https://thumbs.gfycat.com/ZealousGleamingGrassspider-size_restricted.gif)
+
 ## Running it
 
 This project is intended to be run in a development environment. The environment variables in a frontend build (`REACT_APP_...`) are not private.
